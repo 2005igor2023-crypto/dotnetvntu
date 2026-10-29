@@ -388,7 +388,7 @@ public class Rectangle : Shape
 ---
 
 ## 6. Посилання на GitHub-репозиторій
-- **URL репозиторію:** `https://github.com/Gerald20001/vntu-dotnet-labs`
+- **URL репозиторію:** `https://github.com/2005igor2023-crypto/dotnetvntu`
 - **Папка проєкту:** `/02-oop-exceptions`
 
 ---

@@ -111,7 +111,7 @@ HTTP/1.1 204 No Content
 ---
 
 ## 5. Посилання на репозиторій
-- **URL репозиторію:** `https://github.com/Gerald20001/vntu-dotnet-labs`
+- **URL репозиторію:** `https://github.com/2005igor2023-crypto/dotnetvntu`
 - **Папка проєкту:** `/07-auth-jwt`
 
 ---

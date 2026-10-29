@@ -357,7 +357,7 @@ internal class Program
 ---
 
 ## 6. Посилання на GitHub-репозиторій
-- **URL репозиторію:** `https://github.com/Gerald20001/vntu-dotnet-labs`
+- **URL репозиторію:** `https://github.com/2005igor2023-crypto/dotnetvntu`
 - **Папка проєкту:** `/01-csharp-basics`
 
 ---

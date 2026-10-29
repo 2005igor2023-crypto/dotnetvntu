@@ -209,7 +209,7 @@ Content-Type: application/json
 ---
 
 ## 7. Посилання на репозиторій
-- **URL репозиторію:** `https://github.com/Gerald20001/vntu-dotnet-labs`
+- **URL репозиторію:** `https://github.com/2005igor2023-crypto/dotnetvntu`
 - **Папка проєкту:** `/05-aspnetcore-efcore-sqlite-crud`
 
 ---
