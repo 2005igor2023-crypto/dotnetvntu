@@ -63,7 +63,7 @@ internal class Program
     private static void PrintMenu()
     {
         Console.WriteLine("\n=======================================================");
-        Console.WriteLine("    Практична робота №2 | Варіант 1 (№17 у списку)   ");
+        Console.WriteLine("    Практична робота №2 | Варіант 1   ");
         Console.WriteLine("         Геометричні фігури (ООП та виключення)        ");
         Console.WriteLine("=======================================================");
         Console.WriteLine("1. Додати фігуру (коло або прямокутник)");

@@ -53,7 +53,7 @@ internal class Program
     private static void PrintMenu()
     {
         Console.WriteLine("\n=======================================================");
-        Console.WriteLine("    Практична робота №1 | Варіант 1 (№17 у списку)   ");
+        Console.WriteLine("    Практична робота №1 | Варіант 1   ");
         Console.WriteLine("          Статистика результатів тестування            ");
         Console.WriteLine("=======================================================");
         Console.WriteLine("1. Додати результат тестування (бал від 0 до 100)");
@@ -179,9 +179,9 @@ internal class Program
 
         int total = scores.Length;
 
-        Console.WriteLine($"• Відмінно    (90–100 балів): {excellent,3} ст. ({(double)excellent / total * 100:F1}%)");
-        Console.WriteLine($"• Добре       (75–89  балів): {good,3} ст. ({(double)good / total * 100:F1}%)");
-        Console.WriteLine($"• Задовільно  (60–74  бали ): {satisfactory,3} ст. ({(double)satisfactory / total * 100:F1}%)");
+        Console.WriteLine($"• Відмінно    (90-100 балів): {excellent,3} ст. ({(double)excellent / total * 100:F1}%)");
+        Console.WriteLine($"• Добре       (75-89  балів): {good,3} ст. ({(double)good / total * 100:F1}%)");
+        Console.WriteLine($"• Задовільно  (60-74  бали ): {satisfactory,3} ст. ({(double)satisfactory / total * 100:F1}%)");
         Console.WriteLine($"• Незадовільно (<60   балів): {unsatisfactory,3} ст. ({(double)unsatisfactory / total * 100:F1}%)");
         Console.WriteLine($"--------------------------------------------------");
         Console.WriteLine($"Разом перевірено робіт: {total}");

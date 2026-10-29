@@ -11,6 +11,7 @@ public class BookDto
     public string Genre { get; set; } = string.Empty;
     public int AuthorId { get; set; }
     public string AuthorName { get; set; } = string.Empty;
+    public string AuthorFullName => AuthorName;
 }
 
 public class CreateBookDto

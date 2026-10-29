@@ -3,172 +3,164 @@
 **Вінницький національний технічний університет (ВНТУ)**  
 **Факультет інформаційних технологій та комп'ютерної інженерії (ФІТКІ)**  
 **Кафедра програмного забезпечення (ПЗ)**  
-**Студент:** №17 за журналом групи  
-**Розрахунковий варіант:** **Варіант №1**  
+**Студент:** Слободян Ігор, група 2ПІ-24б  
+**Варіант:** №1  
 
 ---
 
-## 📁 Структура рішень та репозиторію
+## Структура рішень та репозиторію
 
-Репозиторій організовано відповідно до вимог гайду [00-setup](https://mypo-vntu.github.io/vntu-dotnet-pract/00-setup/) та містить усі практичні роботи курсу:
+Репозиторій організовано відповідно до вимог курсу та містить усі практичні роботи (Модуль 1 та Модуль 2):
 
 ```text
-dotnet-labs/
+DOTNET/
 ├── DotNetLabs.sln                           # Головне рішення (Solution) з усіма проєктами
-├── .gitignore                               # Ігнорування бінарних та тимчасових файлів .NET
-├── README.md                                # Повний опис робіт та інструкції із запуску
+├── .gitignore                               # Ігнорування бінарних та тимчасових файлів
+├── README.md                                # Загальний опис робіт та інструкції запуску
 │
-├── 01-csharp-basics/                        # Практична робота №1 (Консольний застосунок)
+├── 01-csharp-basics/                        # Практична робота №1 (Базові конструкції C#)
 │   ├── 01-csharp-basics.csproj
-│   ├── Program.cs
-│   └── REPORT_LAB01.md                      # Звіт ПР №1 + 12 контрольних питань
+│   ├── Program.cs                           # Статистика результатів тестування
+│   ├── REPORT_LAB01.docx                    # Звіт у форматі Word (Times New Roman 14)
+│   └── REPORT_LAB01.md                      # Звіт у форматі Markdown
 │
 ├── 02-oop-exceptions/                       # Практична робота №2 (ООП та винятки)
 │   ├── 02-oop-exceptions.csproj
-│   ├── Models/ (Shape, Circle, Rectangle)
-│   ├── Exceptions/ (InvalidShapeDimensionException)
+│   ├── Models/ (Shape, Circle, Rectangle)   # Поліморфізм, IComparable<Shape>
+│   ├── Exceptions/                          # Власний виняток InvalidShapeDimensionException
 │   ├── Program.cs
-│   └── REPORT_LAB02.md                      # Звіт ПР №2 + UML-діаграма + 12 контрольних питань
+│   ├── REPORT_LAB02.docx
+│   └── REPORT_LAB02.md
 │
 ├── 03-generics-delegates-events/             # Практична робота №3 (Generics, Делегати, Події)
 │   ├── 03-generics-delegates-events.csproj
-│   ├── Collections/ (MyStack<T>)
-│   ├── Events/ (OverflowEventArgs)
-│   ├── Exceptions/ (EmptyStackException)
-│   ├── Program.cs
-│   └── REPORT_LAB03.md                      # Звіт ПР №3 + 5 контрольних питань
+│   ├── Collections/ (Cache<TKey, TValue>)   # Узагальнений кеш із витісненням
+│   ├── Events/ (ItemRemovedEventArgs)       # Подія вилучення найстарішого запису
+│   ├── Program.cs                           # Кеш валют, Func/Action, замикання, лямбди
+│   ├── REPORT_LAB03.docx
+│   └── REPORT_LAB03.md
 │
-├── 04-linq-to-objects/                      # Практична робота №4 (LINQ to Objects)
+├── 04-linq-to-objects/                      # Практична робота №4 (LINQ to Objects та Async)
 │   ├── 04-linq-to-objects.csproj
-│   ├── Program.cs                           # 8+ LINQ-запитів, Join, GroupBy, експорт CSV
-│   └── REPORT_LAB04.md                      # Звіт ПР №4 + 5 контрольних питань
+│   ├── Program.cs                           # Task.WhenAll, Stopwatch, MinBy, Join, CSV
+│   ├── REPORT_LAB04.docx
+│   └── REPORT_LAB04.md
 │
-├── 05-aspnetcore-efcore-sqlite-crud/        # Практична робота №5 (ASP.NET Core Minimal API / CRUD)
+├── 05-aspnetcore-efcore-sqlite-crud/        # Практична робота №5 (CRUD Web API + EF Core + SQLite)
 │   ├── 05-aspnetcore-efcore-sqlite-crud.csproj
-│   ├── Models/ (Author, Book)
-│   ├── Data/ (LibraryDbContext, SQLite)
+│   ├── Models/ (Author, Book)               # Сутності домену «Бібліотека»
+│   ├── Data/ (LibraryDbContext)
 │   ├── Controllers/ (BooksController)
-│   └── REPORT_LAB05.md                      # Звіт ПР №5 + 5 контрольних питань
+│   ├── REPORT_LAB05.docx
+│   └── REPORT_LAB05.md
 │
-├── 06-rest-api/                             # Практична робота №6 (RESTful API, DTO, RFC 7807)
+├── 06-rest-api/                             # Практична робота №6 (RESTful API, DTO, валідація)
 │   ├── 06-rest-api.csproj
 │   ├── DTOs/ (BookDtos, AuthorDtos, ReaderDtos, PagedResult)
-│   ├── Middleware/ (ExceptionHandlingMiddleware - RFC 7807)
-│   ├── Controllers/ (BooksController, AuthorsController, ReadersController)
-│   └── REPORT_LAB06.md                      # Звіт ПР №6 + 5 контрольних питань
+│   ├── Middleware/ (ExceptionHandlingMiddleware - ProblemDetails)
+│   ├── Controllers/ (Books, Authors, Readers)
+│   ├── REPORT_LAB06.docx
+│   └── REPORT_LAB06.md
 │
-├── 07-auth-jwt/                             # Практична робота №7 (JWT автентифікація та RBAC)
+├── 07-auth-jwt/                             # Практична робота №7 (JWT автентифікація та авторизація)
 │   ├── 07-auth-jwt.csproj
-│   ├── Services/ (PasswordHasher PBKDF2, JwtTokenService)
+│   ├── Services/ (PasswordHasher, JwtTokenService)
 │   ├── Controllers/ (AuthController, BooksController з ролями Admin/User)
-│   └── REPORT_LAB07.md                      # Звіт ПР №7 + матриця ролей + 5 контрольних питань
+│   ├── REPORT_LAB07.docx
+│   └── REPORT_LAB07.md
 │
 └── 08-architecture-testing/                 # Практична робота №8 (Clean Architecture & xUnit/Moq)
     ├── 08-architecture-testing.csproj
-    ├── Domain/ (Сутності, Інтерфейси репозиторіїв IUnitOfWork, Винятки)
-    ├── Application/ (Сервіс BookService, DTOs)
-    ├── Infrastructure/ (LibraryDbContext, Репозиторії, UnitOfWork)
+    ├── Domain/ (Entities, Interfaces, Exceptions)
+    ├── Application/ (BookService, DTOs)
+    ├── Infrastructure/ (DbContext, Repositories, UnitOfWork)
     ├── Controllers/ (BooksController)
-    ├── tests/LibraryApi.UnitTests/          # xUnit + Moq + WebApplicationFactory
-    │   ├── LibraryApi.UnitTests.csproj
-    │   ├── BookServiceTests.cs              # 8 модульних тестів (Unit Tests)
-    │   └── BookApiIntegrationTests.cs       # 5 інтеграційних тестів (Integration Tests)
-    └── REPORT_LAB08.md                      # Звіт ПР №8 + архітектурна схема + 6 контрольних питань
+    ├── tests/LibraryApi.UnitTests/          # 13 модульних та інтеграційних тестів
+    ├── REPORT_LAB08.docx
+    └── REPORT_LAB08.md
 ```
 
 ---
 
-## 📌 Огляд реалізованих робіт
+## Тематика та реалізований функціонал робіт (Варіант 1)
 
-### 🟢 Модуль 1: Основи C# та ООП
-- **ПР №1: «Базові конструкції C#. Консольний застосунок» (Варіант 1: Статистика результатів тестування)**
-  - Масиви `int[] scores`, динамічна зміна через `Array.Resize`;
-  - Середній бал, Min/Max з індексами, розподіл на категорії через `switch expression`;
-  - Безпечне введення через `int.TryParse`, обробка граничних випадків (порожній масив).
-- **ПР №2: «ООП та обробка виключень у консольному застосунку» (Варіант 1: Геометричні фігури)**
-  - Абстрактний клас `Shape`, реалізація `IComparable<Shape>`;
-  - Похідні класи `Circle`, `Rectangle` (та квадрат), перевизначення площі/периметра;
-  - Поліморфна колекція `List<Shape>`, сортування, власний виняток `InvalidShapeDimensionException`, `try-catch-finally`.
-- **ПР №3: «Узагальнення, делегати та події» (Варіант 1: Узагальнений стек `Stack<T>` з нуля)**
-  - Власний узагальнений стек `MyStack<T>` з динамічним розширенням пам'яті;
-  - Подія переповнення `Overflow` з користувацьким `OverflowEventArgs`;
-  - Власні методи вищих порядків: `FindAll(Predicate<T>)`, `CountWhere(Func<T, bool>)`, `ForEach(Action<T>)`, `Select`.
-- **ПР №4: «LINQ to Objects» (Варіант 1: Студенти та оцінки)**
-  - Вибірка з 25 студентів 4 груп, пов'язаних з кураторами (`Join`);
-  - 8 аналітичних запитів (фільтрація, пагінація `Skip/Take`, групування `GroupBy`, обчислення GPA);
-  - Порівняння Query Syntax та Method Syntax, експорт зведеного звіту у CSV файл.
+### Модуль 1. Консольні застосунки C#/.NET
+- **ПР №1: «Базові конструкції C#. Консольний застосунок»**
+  - Тема: Статистика результатів тестування (`int[] scores`, від 0 до 100 балів).
+  - Динамічне розширення масиву через `Array.Resize`, обчислення середнього, пошук мінімуму та максимуму з фіксацією індексів, розподіл за категоріями, коректна обробка порожнього масиву («Немає даних»).
+- **ПР №2: «ООП та обробка виключень у консольному застосунку»**
+  - Тема: Геометричні фігури.
+  - Абстрактний базовий клас `Shape`, похідні класи `Circle` та `Rectangle`.
+  - Власний виняток `InvalidShapeDimensionException` при спробі створити фігуру з недопустимими розмірами.
+  - Реалізація інтерфейсу `IComparable<Shape>` для сортування за площею.
+- **ПР №3: «Узагальнення, делегати, події та лямбда-вирази»**
+  - Тема: Кеш курсів валют (`Cache<TKey, TValue> where TKey : notnull`).
+  - Фіксована місткість із витісненням найстаріших записів при переповненні.
+  - Делегати `Func<TKey, TValue>` (метод завантаження `LoadRate`), `Action<TKey, TValue>` (обхід через `ForEach`).
+  - Подія `ItemRemoved` з власним класом `ItemRemovedEventArgs<TKey, TValue>` та двома підписниками (іменований метод та лямбда-вираз).
+  - Замикання у лямбда-виразі для фільтрації за порогом курсу. Демонстрація другого екземпляра `Cache<int, string>`.
+- **ПР №4: «LINQ to Objects та асинхронне програмування»**
+  - Тема: Порівняння цін в інтернет-магазинах (агрегатор пропозицій).
+  - Асинхронне одночасне завантаження через `Task.WhenAll` та послідовне завантаження із заміром часу через `Stopwatch`.
+  - Симуляція збою одного з магазинів з перехопленням `HttpRequestException` та ізоляцією помилки.
+  - Запити LINQ: найдешевша пропозиція кожного товару (`MinBy`), статистика категорій, фільтрація за діапазоном (`OrderBy` + `ThenBy`), зіставлення зі списком бажань (`Join`), експорт звіту в CSV.
 
-### 🔵 Модуль 2: Веб-розробка на ASP.NET Core (Мікропроєкт «Бібліотека», Варіант 1)
-- **ПР №5: «Основи ASP.NET Core Web API та Entity Framework Core (SQLite CRUD)»**
-  - Моделі `Book` та `Author` (зв'язок 1:N);
-  - Налаштування `LibraryDbContext` з SQLite та початковими даними (Seed);
-  - Асинхронні CRUD операції, OpenAPI та інтерактивна документація Scalar UI.
-- **ПР №6: «Проєктування REST API: DTO, Валідація та Обробка помилок»**
-  - Домен розширено: `Reader`, `BookLoan` (видача книг);
-  - Розділення доменних моделей та DTO (`BookDto`, `CreateBookDto`), пагінація `PagedResult<T>`;
-  - Фільтрація, пошук та сортування у запитах;
-  - Централізований Middleware обробки помилок за стандартом **RFC 7807 ProblemDetails**.
-- **ПР №7: «Автентифікація та авторизація через JWT токени»**
-  - Безпечне хешування паролів сіллю через **PBKDF2 HMAC-SHA256**;
-  - Генерація та верифікація токенів `JwtSecurityToken` з ролями (`Admin`, `User`);
-  - Рольова безпека (RBAC): публічний доступ до каталогу, читання для зареєстрованих, модифікація виключно для адміністраторів (`[Authorize(Roles = "Admin")]`).
-- **ПР №8: «Архітектурні патерни (Clean Architecture) та тестування (xUnit + Moq)»**
-  - Розподіл на шари: **Domain**, **Application**, **Infrastructure**, **Presentation (API)**;
-  - Патерни **Repository** (`IBookRepository`, `IAuthorRepository`) та **Unit of Work** (`IUnitOfWork`);
-  - Сервісний шар `BookService` з валідацією бізнес-правил та тонкі REST-контролери;
-  - **8 модульних тестів (Unit Tests)** на базі `xUnit` та `Moq`;
-  - **5 інтеграційних тестів (Integration Tests)** з використанням `WebApplicationFactory`.
+### Модуль 2. Наскрізний Web API мікропроєкт (Домен «Бібліотека»)
+- **ПР №5: «Основи ASP.NET Core, EF Core та SQLite: перший CRUD Web API»**
+  - Сутності `Book` та `Author` зі зв'язком «один-до-багатьох».
+  - Міграції Entity Framework Core, підключення до файлової бази SQLite, початковий посів даних (Seed).
+  - Повний асинхронний CRUD (GET, POST, PUT, DELETE), підключення Scalar UI для тестування API.
+- **ПР №6: «Проєктування та розробка REST API»**
+  - Розширення моделі: додано сутності `Reader` (Читач) та `BookLoan` (Видача книги).
+  - Розподіл на DTO (Request/Response) з валідацією через Data Annotations.
+  - Підтримка пагінації (`page`, `pageSize`), фільтрації та сортування.
+  - Глобальна обробка помилок через `ExceptionHandlingMiddleware` за стандартом RFC 7807 (ProblemDetails).
+- **ПР №7: «Автентифікація та авторизація в ASP.NET Core»**
+  - Сутність `User`, реєстрація та авторизація через JWT-токени (`JwtBearer`).
+  - Безпечне хешування паролів за алгоритмом PBKDF2 HMAC-SHA256.
+  - Рольова авторизація (RBAC): ролі `Admin` та `User`. Захист операцій модифікації даних атрибутом `[Authorize(Roles = "Admin")]`.
+- **ПР №8: «Архітектурні патерни та тестування .NET-застосунку»**
+  - Організація за принципами Clean Architecture: шари `Domain`, `Application`, `Infrastructure`, `Api`.
+  - Патерни `Repository` та `Unit of Work`.
+  - Сервісний шар `BookService` з інкапсуляцією бізнес-правил.
+  - Набір із 13 тестів (8 модульних тестів на базі xUnit + Moq та 5 інтеграційних тестів через `WebApplicationFactory`).
 
 ---
 
-## 🚀 Як запускати проєкти
-
-### Запуск через командний рядок (.NET CLI)
+## Запуск проєктів
 
 ```bash
-# Практичні роботи 1-4 (Консольні застосунки):
+# Запуск консольних робіт (ПР 1-4):
 dotnet run --project 01-csharp-basics
 dotnet run --project 02-oop-exceptions
 dotnet run --project 03-generics-delegates-events
 dotnet run --project 04-linq-to-objects
 
-# Практичні роботи 5-8 (Веб-сервіси REST API):
+# Запуск Web API проєктів (ПР 5-8):
 dotnet run --project 05-aspnetcore-efcore-sqlite-crud
 dotnet run --project 06-rest-api
 dotnet run --project 07-auth-jwt
 dotnet run --project 08-architecture-testing
 
-# Запуск модульних та інтеграційних тестів (ПР №8):
+# Запуск тестів (ПР №8):
 dotnet test 08-architecture-testing/tests/LibraryApi.UnitTests
 ```
 
 ---
 
-## 📄 Повні звіти до всіх робіт (Формати Word .docx та Markdown .md)
+## Звіти до практичних робіт
 
-Усі звіти оформлені українською мовою з повними теоретичними обґрунтуваннями, архітектурними схемами, лістингами коду, таблицями та детальними відповідями на всі контрольні питання згідно з силабусом. Доступні як у форматі **Microsoft Word (.docx)** для здачі викладачу, так і у форматі **Markdown (.md)**:
+До кожної практичної роботи підготовлено звіт у двох форматах:
+1. Microsoft Word (`.docx`) - оформлений відповідно до стандартів (шрифт Times New Roman 14 pt, полуторний інтервал, чорно-біле оформлення без декоративних кольорів, таблиці з чіткими межами).
+2. Markdown (`.md`) - для перегляду у веб-інтерфейсі репозиторію.
 
-1. **Практична робота №1:**
-   - 📄 Word: [`01-csharp-basics/REPORT_LAB01.docx`](01-csharp-basics/REPORT_LAB01.docx)
-   - 📝 Markdown: [`01-csharp-basics/REPORT_LAB01.md`](01-csharp-basics/REPORT_LAB01.md) (12 контрольних питань)
-2. **Практична робота №2:**
-   - 📄 Word: [`02-oop-exceptions/REPORT_LAB02.docx`](02-oop-exceptions/REPORT_LAB02.docx)
-   - 📝 Markdown: [`02-oop-exceptions/REPORT_LAB02.md`](02-oop-exceptions/REPORT_LAB02.md) (12 контрольних питань + діаграма класів)
-3. **Практична робота №3:**
-   - 📄 Word: [`03-generics-delegates-events/REPORT_LAB03.docx`](03-generics-delegates-events/REPORT_LAB03.docx)
-   - 📝 Markdown: [`03-generics-delegates-events/REPORT_LAB03.md`](03-generics-delegates-events/REPORT_LAB03.md) (5 контрольних питань)
-4. **Практична робота №4:**
-   - 📄 Word: [`04-linq-to-objects/REPORT_LAB04.docx`](04-linq-to-objects/REPORT_LAB04.docx)
-   - 📝 Markdown: [`04-linq-to-objects/REPORT_LAB04.md`](04-linq-to-objects/REPORT_LAB04.md) (5 контрольних питань + CSV)
-5. **Практична робота №5:**
-   - 📄 Word: [`05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.docx`](05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.docx)
-   - 📝 Markdown: [`05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.md`](05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.md) (5 контрольних питань)
-6. **Практична робота №6:**
-   - 📄 Word: [`06-rest-api/REPORT_LAB06.docx`](06-rest-api/REPORT_LAB06.docx)
-   - 📝 Markdown: [`06-rest-api/REPORT_LAB06.md`](06-rest-api/REPORT_LAB06.md) (5 контрольних питань)
-7. **Практична робота №7:**
-   - 📄 Word: [`07-auth-jwt/REPORT_LAB07.docx`](07-auth-jwt/REPORT_LAB07.docx)
-   - 📝 Markdown: [`07-auth-jwt/REPORT_LAB07.md`](07-auth-jwt/REPORT_LAB07.md) (5 контрольних питань)
-8. **Практична робота №8:**
-   - 📄 Word: [`08-architecture-testing/REPORT_LAB08.docx`](08-architecture-testing/REPORT_LAB08.docx)
-   - 📝 Markdown: [`08-architecture-testing/REPORT_LAB08.md`](08-architecture-testing/REPORT_LAB08.md) (6 контрольних питань + Clean Architecture)
+| № ПР | Назва роботи | Звіт Word (.docx) | Звіт Markdown (.md) |
+|---|---|---|---|
+| 1 | Базові конструкції C#. Консольний застосунок | [REPORT_LAB01.docx](01-csharp-basics/REPORT_LAB01.docx) | [REPORT_LAB01.md](01-csharp-basics/REPORT_LAB01.md) |
+| 2 | ООП та обробка виключень у консольному застосунку | [REPORT_LAB02.docx](02-oop-exceptions/REPORT_LAB02.docx) | [REPORT_LAB02.md](02-oop-exceptions/REPORT_LAB02.md) |
+| 3 | Узагальнення, делегати, події та лямбда-вирази | [REPORT_LAB03.docx](03-generics-delegates-events/REPORT_LAB03.docx) | [REPORT_LAB03.md](03-generics-delegates-events/REPORT_LAB03.md) |
+| 4 | LINQ to Objects та асинхронне програмування | [REPORT_LAB04.docx](04-linq-to-objects/REPORT_LAB04.docx) | [REPORT_LAB04.md](04-linq-to-objects/REPORT_LAB04.md) |
+| 5 | Основи ASP.NET Core, EF Core та SQLite | [REPORT_LAB05.docx](05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.docx) | [REPORT_LAB05.md](05-aspnetcore-efcore-sqlite-crud/REPORT_LAB05.md) |
+| 6 | Проєктування та розробка REST API | [REPORT_LAB06.docx](06-rest-api/REPORT_LAB06.docx) | [REPORT_LAB06.md](06-rest-api/REPORT_LAB06.md) |
+| 7 | Автентифікація та авторизація в ASP.NET Core (JWT) | [REPORT_LAB07.docx](07-auth-jwt/REPORT_LAB07.docx) | [REPORT_LAB07.md](07-auth-jwt/REPORT_LAB07.md) |
+| 8 | Архітектурні патерни та тестування (xUnit + Moq) | [REPORT_LAB08.docx](08-architecture-testing/REPORT_LAB08.docx) | [REPORT_LAB08.md](08-architecture-testing/REPORT_LAB08.md) |

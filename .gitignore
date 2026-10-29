@@ -30,9 +30,20 @@ ehthumbs.db
 Desktop.ini
 .DS_Store
 
-## Temporary scripts and credentials
+## Temporary scripts, environments and AI artifacts
 .git_token
 *.ps1
 AGENTS.md
 GEMINI.md
 tools/
+.gemini/
+.gemini
+.claude/
+.claude
+.copilot/
+.copilot
+.system_generated/
+scratch/
+*_spec.txt
+*.tmp
+*.temp
